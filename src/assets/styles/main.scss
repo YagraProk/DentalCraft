@@ -31,7 +31,7 @@ h1{
 }
 
 h2{
-  font-weight: 600;
+  font-weight: 800;
   font-size: 18px;
   line-height: 25px; 
   letter-spacing: 0.1em;
@@ -203,6 +203,10 @@ span{
   line-height: 25px;
   background-color: transparent;
   border: none;
+  color:#000;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
 }
 
 .drop_contacts {
@@ -366,6 +370,14 @@ img{
   margin-bottom: 80px;
   align-items:center;
 
+.line{
+  margin-bottom: 5px;
+  background-image: url('../icons/double_line_price.png');
+  background-repeat: repeat-x;
+  min-height: 64px;
+  width: 100%;
+}
+
 h3{
   margin-top: 25px;
 }
@@ -426,13 +438,13 @@ a{
 
 .line{
   margin-bottom: 5px;
-  background-image: url('../icons/line_price.png');
+  background-image: url('../icons/double_line_price.png');
   background-repeat: repeat-x;
-  min-height: 32px;
+  min-height: 64px;
 }
 
 h2{
-  margin: 0;
+  margin: 20px 0;
 }
 
 table{
@@ -660,8 +672,9 @@ path{
 .price{
   
 .line{
-  background-image: url('../icons/double_line_price.png');
-  min-height: 64px;
+ margin-bottom: 25px;
+}
+h2{
   margin-bottom: 25px;
 }
 }
@@ -699,24 +712,22 @@ path{
 
 .header_inner{
   justify-content: space-around;
+  align-items: center;
 
 .menu_list{
   padding: 0 25px;
 }
-}
-}
-  
-  
-  .drop_contacts{
-    margin-bottom: 65px;
-  }
 
-  .footer{
-    // width: 100%;
+.drop_contacts{
+  margin-bottom: 65px;
+  top:25px;
+}
+}
+}
+  
+.footer{
+   
     .footer_inner{
-      // display: flex;
-      // width: 100%;
-      // display: flex;
       justify-content: space-around;
       padding: 20px;
       gap: 0;
@@ -731,7 +742,12 @@ path{
 
 
 @media(min-width:1440px){
-.wrapper{
+h2{
+  font-size: 48px;
+  line-height: 54px; 
+}
+
+  .wrapper{
   max-width: 1920px;
   margin-top: 55px;
     
@@ -751,11 +767,13 @@ path{
 }
 
 .our_services{
-     
-.block{
-  gap: 290px;
-  justify-content: space-between;
 
+align-items:normal;
+
+.block{
+  gap: unset;
+  justify-content: space-evenly;
+  
 .service{
   max-width: 655px;
   min-height: 710px;
@@ -819,6 +837,9 @@ a{
 
 
 .price{
+h2{
+  margin-bottom: 30px;
+}
 
 table{
 

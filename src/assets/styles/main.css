@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 0.1em;
@@ -189,6 +189,10 @@ header .header_inner .specialButton {
   line-height: 25px;
   background-color: transparent;
   border: none;
+  color: #000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .drop_contacts {
@@ -330,6 +334,13 @@ header .header_inner .specialButton {
   margin-bottom: 80px;
   align-items: center;
 }
+.our_services .line {
+  margin-bottom: 5px;
+  background-image: url("../icons/double_line_price.png");
+  background-repeat: repeat-x;
+  min-height: 64px;
+  width: 100%;
+}
 .our_services h3 {
   margin-top: 25px;
 }
@@ -381,12 +392,12 @@ header .header_inner .specialButton {
 }
 .price .line {
   margin-bottom: 5px;
-  background-image: url("../icons/line_price.png");
+  background-image: url("../icons/double_line_price.png");
   background-repeat: repeat-x;
-  min-height: 32px;
+  min-height: 64px;
 }
 .price h2 {
-  margin: 0;
+  margin: 20px 0;
 }
 .price table {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -562,8 +573,9 @@ table tr:last-child td {
     gap: 50px;
   }
   .price .line {
-    background-image: url("../icons/double_line_price.png");
-    min-height: 64px;
+    margin-bottom: 25px;
+  }
+  .price h2 {
     margin-bottom: 25px;
   }
   .footer .footer_inner {
@@ -588,12 +600,14 @@ table tr:last-child td {
   }
   .wrapper .header .header_inner {
     justify-content: space-around;
+    align-items: center;
   }
   .wrapper .header .header_inner .menu_list {
     padding: 0 25px;
   }
-  .wrapper .drop_contacts {
+  .wrapper .header .header_inner .drop_contacts {
     margin-bottom: 65px;
+    top: 25px;
   }
   .wrapper .footer .footer_inner {
     justify-content: space-around;
@@ -605,6 +619,10 @@ table tr:last-child td {
   }
 }
 @media (min-width: 1440px) {
+  h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
   .wrapper {
     max-width: 1920px;
     margin-top: 55px;
@@ -616,9 +634,12 @@ table tr:last-child td {
     display: block;
     order: 1;
   }
+  .wrapper .our_services {
+    align-items: normal;
+  }
   .wrapper .our_services .block {
-    gap: 290px;
-    justify-content: space-between;
+    gap: unset;
+    justify-content: space-evenly;
   }
   .wrapper .our_services .block .service {
     max-width: 655px;
@@ -662,6 +683,9 @@ table tr:last-child td {
   .wrapper .footer .footer_inner .footer_logo a .logo_word {
     display: flex;
     flex-direction: column;
+  }
+  .price h2 {
+    margin-bottom: 30px;
   }
   .price table tr td {
     font-size: 24px;
