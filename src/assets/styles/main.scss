@@ -328,20 +328,14 @@ img{
 
 /*discount*/
 .discount{
-  background-color: red;
-  color:#fff;
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  margin-bottom: 80px;
 
-h2{
-  color:#fff;
+img{
+  width: 100%;
 }
 
-p{
-  text-align: center;
-}
+  margin-bottom: 40px;
+
+
 }
 
 /*road*/
@@ -350,14 +344,10 @@ p{
   margin-bottom: 80px;
   display:flex;
   flex-direction: column;
+  // align-items:center;
 
 .map{
-  display: flex;
-
-img{
-  width: 100%;
-  max-height: 550px;
-}
+  align-items:center;
 }
 }
 
@@ -723,6 +713,10 @@ h2{
   top:25px;
 }
 }
+}
+
+.discount{
+  margin-bottom: 80px;
 }
   
 .footer{

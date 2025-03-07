@@ -298,18 +298,10 @@ header .header_inner .specialButton {
 
 /*discount*/
 .discount {
-  background-color: red;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
-.discount h2 {
-  color: #fff;
-}
-.discount p {
-  text-align: center;
+.discount img {
+  width: 100%;
 }
 
 /*road*/
@@ -319,11 +311,7 @@ header .header_inner .specialButton {
   flex-direction: column;
 }
 .road .map {
-  display: flex;
-}
-.road .map img {
-  width: 100%;
-  max-height: 550px;
+  align-items: center;
 }
 
 /*our_services*/
@@ -608,6 +596,9 @@ table tr:last-child td {
   .wrapper .header .header_inner .drop_contacts {
     margin-bottom: 65px;
     top: 25px;
+  }
+  .wrapper .discount {
+    margin-bottom: 80px;
   }
   .wrapper .footer .footer_inner {
     justify-content: space-around;
