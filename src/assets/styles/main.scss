@@ -42,11 +42,10 @@ h2{
 
 h3{
 font-weight: 600;
-font-size: 12px;
-line-height: 17px; 
+font-size: 26px;
+line-height: 30px; 
 letter-spacing: 0.1em;
 text-transform: uppercase;
-text-align: center;
 color: #39513F;
 }
 
@@ -369,14 +368,13 @@ img{
 }
 
 h3{
-  margin-top: 25px;
-}
-
-p{
-  font-weight: 400;
-  font-size: 12px;
-  color: #39513F;
-  margin-left: 30px;
+  margin: 0;
+  min-height: 115px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  
 }
 
 .block{
@@ -628,7 +626,7 @@ a{
   padding: 0px;
   background-color: transparent;
   flex-direction: row;
-  gap: 60px;
+  gap: 55px;
   width: auto;
 
 .drop_contacts-phone,
@@ -776,19 +774,16 @@ align-items:normal;
   align-items:center;
 
 h3{
-  font-size: 24px;
-  line-height: 34px; 
+  font-size: 45px;
+  line-height: 48px; 
   letter-spacing: 0.1em;
-  margin-top: 55px;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
 }
 
-p{
-  font-size: 24px;
-  line-height: 29px;
-  margin: 0 40px 20px;
-  text-align: center;
-}
-      
 img{
   max-width: 650px;
   min-height: 400px;
@@ -798,7 +793,7 @@ img{
 .service_btn{
   max-width: 390px;
   max-height: 75px;
-  margin: 0;
+  margin: 0 0 50px 0;
         
 a{
   padding: 20px 50px;
