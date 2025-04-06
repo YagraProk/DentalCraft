@@ -478,6 +478,13 @@ table tr:last-child td {
 
 /*MEDIA*/
 @media (min-width: 540px) {
+  .discount {
+    display: flex;
+    justify-content: center;
+  }
+  .discount img {
+    width: 80%;
+  }
   .footer .footer_inner {
     justify-content: space-between;
   }
@@ -671,6 +678,13 @@ table tr:last-child td {
     display: flex;
     flex-direction: column;
   }
+  .discount {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  .discount img {
+    width: 100%;
+  }
   .price h2 {
     margin-bottom: 30px;
   }
@@ -721,7 +735,7 @@ table tr:last-child td {
   .about_us .about_us_content .properties .properties_item img {
     display: block;
     justify-self: center;
-    margin-bottom: 5px;
+    margin: 0 auto 5px;
   }
   .about_us .about_us_content .price_btn {
     margin-bottom: 55px;

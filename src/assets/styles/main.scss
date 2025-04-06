@@ -552,6 +552,16 @@ a{
 /*MEDIA*/
 
 @media(min-width:540px){
+.discount{
+  display: flex;
+  justify-content: center;
+  
+  img{
+    width: 80%;
+  
+  }
+}
+
 .footer{
   
 .footer_inner{
@@ -824,6 +834,15 @@ a{
 }
 } 
 
+.discount{
+  margin-left: 200px;
+  margin-right: 200px;
+
+  img{
+    width: 100%;
+  }
+}
+
 
 .price{
 h2{
@@ -893,7 +912,7 @@ p{
 img{
   display: block;
   justify-self: center;
-  margin-bottom: 5px;
+  margin: 0 auto 5px;
 }
 }
 }
