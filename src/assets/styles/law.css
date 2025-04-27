@@ -132,6 +132,8 @@
   font-size: 32px;
   margin: 0 0 30px 0;
   color: #39513F;
+  display: flex;
+  justify-content: center;
 }
 .wrapper .docs .docs_item {
   margin: 0;
@@ -143,7 +145,8 @@
   margin-bottom: 20px;
 }
 .wrapper .docs .docs_item .docs_item-link a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-position: under;
   color: #39513F;
   font-size: 20px;
   line-height: 24px;
