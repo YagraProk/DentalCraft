@@ -308,9 +308,15 @@ header .header_inner .specialButton {
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .road .map {
   align-items: center;
+  width: 100%;
+  min-width: 320px;
+}
+.road .map iframe {
+  width: 100%;
 }
 
 /*our_services*/
@@ -428,6 +434,11 @@ table tr:last-child td {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.prodoc_widget {
+  display: flex;
+  justify-content: center;
 }
 
 /*footer*/
