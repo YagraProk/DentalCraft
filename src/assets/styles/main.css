@@ -116,7 +116,7 @@ header .header_inner .specialButton {
 }
 
 .burger.active {
-  z-index: 2;
+  z-index: 3;
 }
 .burger.active span {
   height: 0;
@@ -148,6 +148,7 @@ header .header_inner .specialButton {
   margin: 0;
   background: #39513F;
   gap: 30px;
+  z-index: 2;
 }
 
 .item {
@@ -207,6 +208,7 @@ header .header_inner .specialButton {
   gap: 25px;
   transition: all 0.3s;
   width: 280px;
+  z-index: 2;
 }
 
 .drop_contacts._active {
