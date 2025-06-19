@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Наши врачи</title>
     <link href="./src/assets/styles/index.css" rel="stylesheet">
+    <link href="/src/assets/styles/itc-slider.css" rel="stylesheet">
     <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
     <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
 </head>
@@ -25,7 +26,7 @@
               <li class="item"><a href="/.#road" class="item-link">Как добраться</a></li>
               <li class="item"><a href="/.#price" class="item-link">Прайс</a></li>
               <li class="item"><a href="/doctors.html" class="item-link">Наши врачи</a></li>
-              <li class="item"><a href="#" class="item-link">Наши работы</a></li>
+              <li class="item"><a href="/cases.html" class="item-link">Наши работы</a></li>
               <li class="item"><a href="/law.html" class="item-link">Правовая информация</a></li>
             </ul>
           </nav>
@@ -57,23 +58,103 @@
         </div>  
     </div>
     </header>
+    <section class="doctors">
     <div class="doctor">
-        <img src="" alt="" class="doctor_img">
-        <p class="doctor_text"></p>
-        <div class="doctor_docs">
-        <div class="slides">
-            <div class="slide"><img src="Slide1.webp"></div>
-            <div class="slide"><img src="Slide2.webp"></div>
-            <div class="slide"><img src="Slide3.webp"></div>
-        </div>
-    
-        <!-- Кнопки управления слайдером -->
-        <button class="prev">&#10094;</button> <!-- Кнопка «Назад» -->
-        <button class="next">&#10095;</button> <!-- Кнопка «Вперёд» -->
-        </div>
+    <div class="itc-slider" data-slider="itc-slider">
+    <div class="itc-slider-wrapper">
+    <div class="itc-slider-items">
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/novoml.jpg" alt="Слайд 1">
+      </div>
+      </div>
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/novoml_diplom.jpg" alt="Слайд 2">
+      </div>
+      </div>
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/novoml_accr.jpg" alt="Слайд 3">
+      </div>
+      </div>
     </div>
     </div>
+    <button class="itc-slider-btn itc-slider-btn-prev"></button>
+    <button class="itc-slider-btn itc-slider-btn-next"></button>
+    <ol class="itc-slider-indicators">
+    <li class="itc-slider-indicator" data-slide-to="0"></li>
+    <li class="itc-slider-indicator" data-slide-to="1"></li>
+    <li class="itc-slider-indicator" data-slide-to="2"></li>
+    </ol>
+    </div>
+    <h3 class="doctor_name">Новомлинская Ирина Игоревна</h3>
+    </div>
+    <div class="doctor">
+    <div class="itc-slider" data-slider="itc-slider">
+    <div class="itc-slider-wrapper">
+    <div class="itc-slider-items">
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/maxutov.jpg" alt="Слайд 1">
+      </div>
+      </div>
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/maxutov_diplom1.jpg" alt="Слайд 2">
+      </div>
+      </div>
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/maxutov_diplom2.jpg" alt="Слайд 3">
+      </div>
+      </div>
+    </div>
+    </div>
+    <button class="itc-slider-btn itc-slider-btn-prev"></button>
+    <button class="itc-slider-btn itc-slider-btn-next"></button>
+    <ol class="itc-slider-indicators">
+    <li class="itc-slider-indicator" data-slide-to="0"></li>
+    <li class="itc-slider-indicator" data-slide-to="1"></li>
+    <li class="itc-slider-indicator" data-slide-to="2"></li>
+    </ol>
+    </div>
+    <h3 class="doctor_name">Максутов Мухамеджан Шафкайевич</h3>
+    </div>
+    <div class="doctor">
+    <div class="itc-slider" data-slider="itc-slider">
+    <div class="itc-slider-wrapper">
+    <div class="itc-slider-items">
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/dergunov.jpg" alt="Слайд 1">
+      </div>
+      </div>
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/dergunov_diplom.jpg" alt="Слайд 2">
+      </div>
+      </div>
+      <div class="itc-slider-item">
+      <div class="image-container">
+      <img src="./src/assets/images/doctors/dergunov_accr.jpg" alt="Слайд 3">
+      </div>
+      </div>
+    </div>
+    </div>
+    <button class="itc-slider-btn itc-slider-btn-prev"></button>
+    <button class="itc-slider-btn itc-slider-btn-next"></button>
+    <ol class="itc-slider-indicators">
+    <li class="itc-slider-indicator" data-slide-to="0"></li>
+    <li class="itc-slider-indicator" data-slide-to="1"></li>
+    <li class="itc-slider-indicator" data-slide-to="2"></li>
+    </ol>
+    </div>
+    <h3 class="doctor_name">Дергунов Андрей Владимирович</h3>
+    </div>
+    </section>
+    </div>
+<script src="/src/itc-slider.js" defer></script>
 <script src="src/main.js"></script>
-<script src="src/doctordocsslider.js"></script>     
 </body>
 </html>

@@ -73,7 +73,7 @@ class ItcSlider {
     this.#resizeObserver = null;
 
     this.#config = {
-      loop: false, direction: 'next', autoplay: false, interval: 5000, refresh: true, swipe: true, ...config
+      loop: true, direction: 'next', autoplay: false, interval: 5000, refresh: true, swipe: true, ...config
     };
 
     this.#init();
@@ -587,22 +587,21 @@ class ItcSlider {
 
 ItcSlider.createInstances();
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
   // Обработчик клика по слайдеру
-  document.querySelectorAll('.case').forEach(caseElement => {
-    caseElement.addEventListener('click', function(e) {
-      // Проверяем, что клик не по кнопкам слайдера и ширина экрана > 768px
-      if (!e.target.closest('.itc-slider-btn') && 
-          !e.target.closest('.itc-slider-indicator') && 
-          window.innerWidth > 768) {
+  document.querySelectorAll('.doctor').forEach(doctorElement => {
+    doctorElement.addEventListener('click', function(e) {
+      // Проверяем, что клик по изображению или его родителям (но не по кнопкам слайдера)
+      if (e.target.closest('.image-container') && 
+          !e.target.closest('.itc-slider-btn') && 
+          !e.target.closest('.itc-slider-indicator')) {
         
         // Блокируем прокрутку body
         document.body.classList.add('unscroll');
         
         const slider = this.querySelector('.itc-slider');
         const activeIndex = getActiveSlideIndex(slider);
+        const doctorName = this.querySelector('.doctor_name').textContent;
         
         // Создаем полноэкранный контейнер
         const fullscreenContainer = document.createElement('div');
@@ -616,21 +615,56 @@ document.addEventListener('DOMContentLoaded', function() {
           closeFullscreen(fullscreenContainer);
         });
         
+        // Заголовок с именем врача
+        const title = document.createElement('h3');
+        title.className = 'fullscreen-doctor-name';
+        title.textContent = doctorName;
+        
         // Контейнер для слайдера
         const sliderContainer = document.createElement('div');
         sliderContainer.className = 'slider-container';
         sliderContainer.innerHTML = slider.outerHTML;
         
         fullscreenContainer.appendChild(closeBtn);
+        fullscreenContainer.appendChild(title);
         fullscreenContainer.appendChild(sliderContainer);
         document.body.appendChild(fullscreenContainer);
         
-        // Анимация появления
-        setTimeout(() => fullscreenContainer.classList.add('active'), 10);
-        
-        // Инициализация слайдера
-        const fullscreenSlider = new ItcSlider(sliderContainer.querySelector('.itc-slider'));
-        fullscreenSlider.slideTo(activeIndex);
+        // Переинициализация слайдера с новыми настройками
+        setTimeout(() => {
+          fullscreenContainer.classList.add('active');
+          
+          // Находим все изображения и устанавливаем им правильные размеры
+          const images = sliderContainer.querySelectorAll('.itc-slider-item img');
+          images.forEach(img => {
+            img.style.maxWidth = '100%';
+            img.style.maxHeight = '100%';
+            img.style.objectFit = 'contain';
+            img.style.width = 'auto';
+            img.style.height = 'auto';
+          });
+          
+          // Инициализация слайдера
+          const fullscreenSlider = ItcSlider.getOrCreateInstance(
+            sliderContainer.querySelector('.itc-slider'),
+            {
+              loop: true,
+              swipe: true
+            }
+          );
+          fullscreenSlider.slideTo(activeIndex);
+          
+          // Центрирование изображений после загрузки
+          images.forEach(img => {
+            if (!img.complete) {
+              img.onload = function() {
+                centerImage(img);
+              };
+            } else {
+              centerImage(img);
+            }
+          });
+        }, 10);
         
         // Закрытие по ESC
         document.addEventListener('keydown', function escHandler(e) {
@@ -642,6 +676,21 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  
+  // Функция для центрирования изображения
+  function centerImage(img) {
+    const container = img.closest('.itc-slider-item');
+    if (!container) return;
+    
+    const containerRect = container.getBoundingClientRect();
+    const imgRect = img.getBoundingClientRect();
+    
+    if (imgRect.height < containerRect.height) {
+      img.style.marginTop = `${(containerRect.height - imgRect.height) / 2}px`;
+    } else {
+      img.style.marginTop = '0';
+    }
+  }
   
   // Закрытие полноэкранного режима
   function closeFullscreen(container) {
@@ -655,6 +704,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Получение индекса активного слайда
   function getActiveSlideIndex(slider) {
     const activeIndicator = slider.querySelector('.itc-slider-indicator-active');
-    return activeIndicator ? [...activeIndicator.parentNode.children].indexOf(activeIndicator) : 0;
+    return activeIndicator ? parseInt(activeIndicator.dataset.slideTo, 10) : 0;
   }
 });
