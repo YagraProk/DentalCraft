@@ -128,7 +128,7 @@ span,
 }    
 
 .burger.active {
-  z-index: 3;
+  z-index: 6;
 
 span{
   height: 0;
@@ -163,7 +163,7 @@ span{
   margin: 0;
   background: #39513F;
   gap: 30px;
-  z-index: 2;
+  z-index: 5;
 }
 
 .item {
