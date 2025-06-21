@@ -41,6 +41,15 @@ document.querySelector('.burger').onclick = function () {
 };
 
 
-document.querySelector('.contacts_btn').addEventListener('click', () => {
-    document.querySelector('.drop_contacts').classList.toggle('_active')
-})
+
+document.querySelector('.contacts_btn').addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    document.querySelector('.drop_contacts').classList.toggle('_active');
+});
+
+document.addEventListener('click', (e) => {
+    const dropContacts = document.querySelector('.drop_contacts');
+    if (!e.target.closest('.contacts_btn') && !e.target.closest('.drop_contacts')) {
+    dropContacts.classList.remove('_active');
+    }
+});
