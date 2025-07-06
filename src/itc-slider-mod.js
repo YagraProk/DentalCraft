@@ -587,28 +587,31 @@ class ItcSlider {
 
 ItcSlider.createInstances();
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
+  // Инициализация всех слайдеров при загрузке страницы
+  document.querySelectorAll('.itc-slider').forEach(sliderEl => {
+    const slider = ItcSlider.getOrCreateInstance(sliderEl);
+    
+    // Обновляем индикаторы для активного слайда
+    const activeIndex = getActiveSlideIndex(sliderEl);
+    updateIndicators(sliderEl, activeIndex);
+  });
+
   // Обработчик клика по слайдеру
   document.querySelectorAll('.case').forEach(caseElement => {
     caseElement.addEventListener('click', function(e) {
-      // Проверяем, что клик не по кнопкам слайдера и ширина экрана > 768px
       if (!e.target.closest('.itc-slider-btn') && 
           !e.target.closest('.itc-slider-indicator') && 
           window.innerWidth > 768) {
         
-        // Блокируем прокрутку body
         document.body.classList.add('unscroll');
         
-        const slider = this.querySelector('.itc-slider');
-        const activeIndex = getActiveSlideIndex(slider);
+        const sliderEl = this.querySelector('.itc-slider');
+        const activeIndex = getActiveSlideIndex(sliderEl);
         
-        // Создаем полноэкранный контейнер
         const fullscreenContainer = document.createElement('div');
         fullscreenContainer.className = 'fullscreen-slider';
         
-        // Кнопка закрытия
         const closeBtn = document.createElement('button');
         closeBtn.className = 'close-btn';
         closeBtn.innerHTML = '&times;';
@@ -616,23 +619,28 @@ document.addEventListener('DOMContentLoaded', function() {
           closeFullscreen(fullscreenContainer);
         });
         
-        // Контейнер для слайдера
         const sliderContainer = document.createElement('div');
         sliderContainer.className = 'slider-container';
-        sliderContainer.innerHTML = slider.outerHTML;
+        
+        // Клонируем слайдер и сохраняем активный слайд
+        const sliderClone = sliderEl.cloneNode(true);
+        sliderContainer.appendChild(sliderClone);
         
         fullscreenContainer.appendChild(closeBtn);
         fullscreenContainer.appendChild(sliderContainer);
         document.body.appendChild(fullscreenContainer);
         
-        // Анимация появления
         setTimeout(() => fullscreenContainer.classList.add('active'), 10);
         
-        // Инициализация слайдера
-        const fullscreenSlider = new ItcSlider(sliderContainer.querySelector('.itc-slider'));
-        fullscreenSlider.slideTo(activeIndex);
+        setTimeout(() => {
+          const fullscreenSlider = new ItcSlider(sliderClone);
+          fullscreenSlider.slideTo(activeIndex);
+          fullscreenContainer._sliderInstance = fullscreenSlider;
+          
+          // Обновляем индикаторы после инициализации
+          updateIndicators(sliderClone, activeIndex);
+        }, 50);
         
-        // Закрытие по ESC
         document.addEventListener('keydown', function escHandler(e) {
           if (e.key === 'Escape') {
             closeFullscreen(fullscreenContainer);
@@ -643,18 +651,46 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Закрытие полноэкранного режима
   function closeFullscreen(container) {
     container.classList.remove('active');
     setTimeout(() => {
+      if (container._sliderInstance) {
+        container._sliderInstance.dispose();
+      }
       document.body.removeChild(container);
       document.body.classList.remove('unscroll');
     }, 300);
   }
   
-  // Получение индекса активного слайда
-  function getActiveSlideIndex(slider) {
-    const activeIndicator = slider.querySelector('.itc-slider-indicator-active');
-    return activeIndicator ? [...activeIndicator.parentNode.children].indexOf(activeIndicator) : 0;
+  function getActiveSlideIndex(sliderEl) {
+    const activeIndicator = sliderEl.querySelector('.itc-slider-indicator-active');
+    if (activeIndicator) {
+      return [...activeIndicator.parentNode.children].indexOf(activeIndicator);
+    }
+    
+    // Если активный индикатор не найден, попробуем определить по активному слайду
+    const activeSlide = sliderEl.querySelector('.itc-slider-item-active');
+    if (activeSlide) {
+      const items = sliderEl.querySelectorAll('.itc-slider-item');
+      return [...items].indexOf(activeSlide);
+    }
+    
+    return 0;
+  }
+  
+  function updateIndicators(sliderEl, activeIndex) {
+    const indicators = sliderEl.querySelectorAll('.itc-slider-indicator');
+    if (indicators.length) {
+      indicators.forEach((indicator, index) => {
+        if (index === activeIndex) {
+          indicator.classList.add('itc-slider-indicator-active');
+        } else {
+          indicator.classList.remove('itc-slider-indicator-active');
+        }
+      });
+    }
   }
 });
+
+// Исправление для Safari на iPhone
+document.addEventListener('touchstart', function() {}, { passive: true });
