@@ -77,6 +77,10 @@ class ItcSlider {
     };
 
     this.#init();
+    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)){
+    this.#state.elItems.style.backfaceVisibility = 'hidden';
+    this.#state.elItems.style.webkitBackfaceVisibility = 'hidden';
+    }
     this.#attachEvents();
   }
 
