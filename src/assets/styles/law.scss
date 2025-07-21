@@ -87,7 +87,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items:center;
-    gap: 25px;
+    gap: 15px;
     transition: all .3s;
     width: 280px;
 }
@@ -96,9 +96,16 @@ img{
     opacity: 1;
     visibility: visible;
 }
-      
+
+.drop_contacts-mail{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
 .drop_contacts-phone,
-.drop_contacts-mail,
+.drop_contacts-mail-one,
+.drop_contacts-mail-two,
 .drop_contacts-adress{
     display: flex;
     justify-content: center;
@@ -199,7 +206,8 @@ a{
     top: 0;
 
 .drop_contacts-phone,
-.drop_contacts-mail,
+.drop_contacts-mail-one,
+.drop_contacts-mail-two,
 .drop_contacts-adress{
 
 a{
@@ -216,6 +224,12 @@ path{
 }    
 }
 }
+}
+}
+
+@media(min-width:895px){
+.drop_contacts{
+  gap: 55px;
 }
 }
 

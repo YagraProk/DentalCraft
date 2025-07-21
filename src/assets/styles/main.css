@@ -205,7 +205,7 @@ header .header_inner .specialButton {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   transition: all 0.3s;
   width: 280px;
   z-index: 2;
@@ -216,14 +216,22 @@ header .header_inner .specialButton {
   visibility: visible;
 }
 
+.drop_contacts-mail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .drop_contacts-phone,
-.drop_contacts-mail,
+.drop_contacts-mail-one,
+.drop_contacts-mail-two,
 .drop_contacts-adress {
   display: flex;
   justify-content: center;
 }
 .drop_contacts-phone a,
-.drop_contacts-mail a,
+.drop_contacts-mail-one a,
+.drop_contacts-mail-two a,
 .drop_contacts-adress a {
   display: flex;
   gap: 5px;
@@ -235,13 +243,15 @@ header .header_inner .specialButton {
   align-items: center;
 }
 .drop_contacts-phone a p,
-.drop_contacts-mail a p,
+.drop_contacts-mail-one a p,
+.drop_contacts-mail-two a p,
 .drop_contacts-adress a p {
   padding: 0;
   margin: 0;
 }
 .drop_contacts-phone span,
-.drop_contacts-mail span,
+.drop_contacts-mail-one span,
+.drop_contacts-mail-two span,
 .drop_contacts-adress span {
   display: flex;
   flex-direction: column;
@@ -558,16 +568,17 @@ table tr:last-child td {
     padding: 0px;
     background-color: transparent;
     flex-direction: row;
-    gap: 55px;
     width: auto;
   }
   .header .contacts .drop_contacts .drop_contacts-phone a,
-  .header .contacts .drop_contacts .drop_contacts-mail a,
+  .header .contacts .drop_contacts .drop_contacts-mail-one a,
+  .header .contacts .drop_contacts .drop_contacts-mail-two a,
   .header .contacts .drop_contacts .drop_contacts-adress a {
     color: #000;
   }
   .header .contacts .drop_contacts .drop_contacts-phone a svg path,
-  .header .contacts .drop_contacts .drop_contacts-mail a svg path,
+  .header .contacts .drop_contacts .drop_contacts-mail-one a svg path,
+  .header .contacts .drop_contacts .drop_contacts-mail-two a svg path,
   .header .contacts .drop_contacts .drop_contacts-adress a svg path {
     stroke: #39513F;
   }
@@ -614,6 +625,7 @@ table tr:last-child td {
   .wrapper .header .header_inner .drop_contacts {
     margin-bottom: 65px;
     top: 25px;
+    gap: 55px;
   }
   .wrapper .discount {
     margin-bottom: 80px;

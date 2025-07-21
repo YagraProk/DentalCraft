@@ -77,7 +77,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   transition: all 0.3s;
   width: 280px;
 }
@@ -85,14 +85,21 @@
   opacity: 1;
   visibility: visible;
 }
+.wrapper .header .header_inner .drop_contacts-mail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .wrapper .header .header_inner .drop_contacts-phone,
-.wrapper .header .header_inner .drop_contacts-mail,
+.wrapper .header .header_inner .drop_contacts-mail-one,
+.wrapper .header .header_inner .drop_contacts-mail-two,
 .wrapper .header .header_inner .drop_contacts-adress {
   display: flex;
   justify-content: center;
 }
 .wrapper .header .header_inner .drop_contacts-phone a,
-.wrapper .header .header_inner .drop_contacts-mail a,
+.wrapper .header .header_inner .drop_contacts-mail-one a,
+.wrapper .header .header_inner .drop_contacts-mail-two a,
 .wrapper .header .header_inner .drop_contacts-adress a {
   display: flex;
   gap: 5px;
@@ -104,13 +111,15 @@
   align-items: center;
 }
 .wrapper .header .header_inner .drop_contacts-phone a p,
-.wrapper .header .header_inner .drop_contacts-mail a p,
+.wrapper .header .header_inner .drop_contacts-mail-one a p,
+.wrapper .header .header_inner .drop_contacts-mail-two a p,
 .wrapper .header .header_inner .drop_contacts-adress a p {
   padding: 0;
   margin: 0;
 }
 .wrapper .header .header_inner .drop_contacts-phone span,
-.wrapper .header .header_inner .drop_contacts-mail span,
+.wrapper .header .header_inner .drop_contacts-mail-one span,
+.wrapper .header .header_inner .drop_contacts-mail-two span,
 .wrapper .header .header_inner .drop_contacts-adress span {
   display: flex;
   flex-direction: column;
@@ -170,14 +179,21 @@
     top: 0;
   }
   .wrapper .header .header_inner .drop_contacts .drop_contacts-phone a,
-  .wrapper .header .header_inner .drop_contacts .drop_contacts-mail a,
+  .wrapper .header .header_inner .drop_contacts .drop_contacts-mail-one a,
+  .wrapper .header .header_inner .drop_contacts .drop_contacts-mail-two a,
   .wrapper .header .header_inner .drop_contacts .drop_contacts-adress a {
     color: #000;
   }
   .wrapper .header .header_inner .drop_contacts .drop_contacts-phone a svg path,
-  .wrapper .header .header_inner .drop_contacts .drop_contacts-mail a svg path,
+  .wrapper .header .header_inner .drop_contacts .drop_contacts-mail-one a svg path,
+  .wrapper .header .header_inner .drop_contacts .drop_contacts-mail-two a svg path,
   .wrapper .header .header_inner .drop_contacts .drop_contacts-adress a svg path {
     stroke: #39513F;
+  }
+}
+@media (min-width: 895px) {
+  .drop_contacts {
+    gap: 55px;
   }
 }
 @media (min-width: 1100px) {
