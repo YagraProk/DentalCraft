@@ -259,7 +259,7 @@ header .header_inner .specialButton {
 
 /*ABOUT_US*/
 .about_us {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .about_us .about_us_content {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/mainbg.jpg") no-repeat center center/cover;
@@ -305,14 +305,6 @@ header .header_inner .specialButton {
 }
 .about_us .side_img {
   display: none;
-}
-
-/*discount*/
-.discount {
-  margin-bottom: 40px;
-}
-.discount img {
-  width: 100%;
 }
 
 /*road*/
