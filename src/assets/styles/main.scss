@@ -235,6 +235,11 @@ span{
   text-decoration-skip-ink: none;
   font-weight: 700;
   padding: 10px;
+
+  img{
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .contacts{
@@ -755,7 +760,6 @@ h2{
 }
 }
 }
-    
   
 @media(min-width:895px){
 .wrapper{

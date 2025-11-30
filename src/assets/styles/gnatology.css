@@ -1,0 +1,264 @@
+@charset "UTF-8";
+.wrapper {
+  padding: 0 5px;
+}
+
+ul {
+  margin: 0;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #39513F;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.intro {
+  margin-bottom: 30px;
+}
+.intro .intro_text {
+  text-indent: 30px;
+  text-align: justify;
+  margin: 0;
+}
+.intro .intro_text span {
+  font-weight: bold;
+}
+
+.sympts {
+  margin-bottom: 30px;
+}
+.sympts .sympts_main .sympts_img {
+  width: 100%;
+  height: 100%;
+}
+.sympts .sympts_main .sympts_description .sympts_description-title {
+  margin: 0 10px 10px 10px;
+}
+.sympts .sympts_main .sympts_description .sympts_description-items {
+  margin: 0 0 15px;
+  list-style-type: none;
+  padding-left: 30px;
+}
+.sympts .sympts_main .sympts_description .sympts_description-items li {
+  position: relative;
+  padding-left: 15px;
+}
+.sympts .sympts_main .sympts_description .sympts_description-items li::before {
+  content: "✓ ";
+  color: #39513F;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sympts .sympts_text {
+  text-indent: 30px;
+  text-align: justify;
+  margin: 0;
+}
+.sympts .sympts_text span {
+  font-weight: bold;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.faq .faq_subtitle {
+  font-weight: normal;
+  text-transform: none;
+}
+.faq .faq_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.faq .faq_main details {
+  width: 90%;
+  background-color: #EADAC5;
+  border-radius: 4px;
+}
+.faq .faq_main summary {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 1rem;
+}
+.faq .faq_main summary:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid #39513F;
+  border-inline: 7px solid transparent;
+}
+.faq .faq_main p {
+  margin: 0;
+  padding: 10px;
+  text-align: justify;
+}
+.faq .faq_main p span {
+  font-weight: bold;
+}
+.faq .faq_main details[open] {
+  background-color: #EADAC5;
+}
+.faq .faq_main details[open] summary {
+  border-bottom: 5px solid #fff;
+}
+.faq .faq_main details[open] summary:after {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.gnatprice {
+  margin-bottom: 30px;
+}
+.gnatprice table {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: #39513F;
+  border-collapse: collapse;
+  min-width: 310px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.gnatprice table tr {
+  height: 80px;
+}
+.gnatprice table tr td {
+  color: #fff;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  border-bottom: 1.5px solid #fff;
+}
+.gnatprice table tr .table_price {
+  width: 70px;
+  padding: 20px 10px 20px 0;
+}
+.gnatprice .gnatprice_function {
+  margin-bottom: 20px;
+}
+.gnatprice .gnatprice_function .gnatprice_function-description {
+  overflow: hidden;
+}
+.gnatprice .gnatprice_function .gnatprice_function-description img {
+  width: 35%;
+  float: left;
+  margin-right: 5px;
+}
+.gnatprice .gnatprice_function .gnatprice_function-description p {
+  text-align: justify;
+  margin: 0;
+}
+.gnatprice .gnatprice_splint .gnatprice_splint-description {
+  overflow: hidden;
+}
+.gnatprice .gnatprice_splint .gnatprice_splint-description img {
+  width: 35%;
+  float: left;
+  margin-right: 5px;
+}
+.gnatprice .gnatprice_splint .gnatprice_splint-description p {
+  text-align: justify;
+  margin: 0;
+}
+
+/*MEDIA*/
+@media (min-width: 768px) {
+  .sympts {
+    margin-bottom: 50px;
+  }
+  .sympts .sympts_main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .sympts .sympts_main .sympts_img {
+    width: 50%;
+    height: 50%;
+  }
+  .sympts .sympts_text {
+    text-align: center;
+  }
+  .faq {
+    align-items: normal;
+  }
+  .gnatprice .gnatprice_function .gnatprice_function-description {
+    display: flex;
+    gap: 10px;
+  }
+  .gnatprice .gnatprice_splint .gnatprice_splint-description {
+    display: flex;
+    gap: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  h4 {
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: 800;
+    margin: 0 0 30px;
+  }
+  .intro {
+    margin-bottom: 50px;
+  }
+  .intro .intro_text {
+    text-indent: 0;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+  }
+  .sympts .sympts_main .sympts_description .sympts_description-items li {
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 30px;
+  }
+  .sympts .sympts_text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .faq {
+    margin-bottom: 50px;
+  }
+  .faq .faq_main {
+    gap: 25px;
+  }
+  .faq .faq_main details {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .faq .faq_main details[open] summary {
+    border-bottom: 10px solid #fff;
+  }
+  .gnatprice table tr td {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 25px;
+  }
+  .gnatprice table tr .table_price {
+    width: 100px;
+    padding: 20px 40px 20px 0;
+  }
+  .gnatprice .gnatprice_function .gnatprice_function-description p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .gnatprice .gnatprice_splint .gnatprice_splint-description p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}/*# sourceMappingURL=gnatology.css.map */

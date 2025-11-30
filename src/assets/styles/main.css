@@ -218,6 +218,10 @@ header .header_inner .specialButton {
   font-weight: 700;
   padding: 10px;
 }
+.item-link img {
+  width: 20px;
+  height: 20px;
+}
 
 .contacts {
   display: flex;
