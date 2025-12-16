@@ -359,6 +359,14 @@ header .header_inner .specialButton {
   display: none;
 }
 
+.banner {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.banner .banner_img {
+  width: 100%;
+}
+
 /*road*/
 .road {
   margin-bottom: 80px;
@@ -707,6 +715,9 @@ table tr:last-child td {
   .wrapper .header .header_inner .specialButton {
     display: block;
     order: 1;
+  }
+  .wrapper .banner .banner_img {
+    width: 85%;
   }
   .wrapper .our_services {
     align-items: normal;

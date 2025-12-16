@@ -385,6 +385,14 @@ img{
 
 }
 
+.banner{
+  text-align: center;
+  margin-bottom: 50px;
+.banner_img{
+  width: 100%;
+}
+}
+
 /*road*/
 
 .road{
@@ -837,6 +845,12 @@ a{
   display: block;
   order: 1;
 } 
+}
+}
+
+.banner{
+.banner_img{
+  width: 85%;
 }
 }
 
