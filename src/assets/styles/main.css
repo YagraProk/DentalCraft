@@ -612,9 +612,10 @@ table tr:last-child td {
   .header .menu_list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 5px;
     background: #39513F;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0;
   }
   .header .menu_list .item {
@@ -713,6 +714,11 @@ table tr:last-child td {
   }
   .wrapper .footer .footer_inner .info {
     flex-grow: 0;
+  }
+}
+@media (min-width: 1082px) {
+  .header .menu_list {
+    justify-content: space-between;
   }
 }
 @media (min-width: 1440px) {

@@ -1,0 +1,702 @@
+@charset "UTF-8";
+.description {
+  width: 100%;
+  background-color: #EADAC5;
+}
+.description .description_text {
+  display: flex;
+  flex-direction: column;
+}
+.description .description_text .description_text-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.description .description_text .description_text-title img {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-25deg);
+  border-radius: 50%;
+  padding-left: 5px;
+}
+.description .description_text .description_text-title .title-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.description .description_text .description_text-title .title-title h3 {
+  margin: 5px 0 5px 0;
+  padding: 0 0 0 5px;
+  letter-spacing: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.description .description_text .description_text-title .title-title h3 span {
+  color: #000;
+}
+.description .description_text .description_text-title .title-title p {
+  padding: 0 10px 0 10px;
+  margin: 0;
+  letter-spacing: 0.1em;
+  text-align: justify;
+}
+.description .description_text .title-img {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border: 5px solid #fff;
+}
+.description .description_text .description_book {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  align-items: center;
+  text-align: center;
+  margin: 0 5px 10px 5px;
+  padding: 10px;
+}
+.description .description_text .description_book h4 {
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0 0 10px;
+  color: #39513F;
+}
+.description .description_text .description_book button {
+  border: 2px solid #ff0000;
+  border-radius: 20px;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  background-color: #ff0000;
+  padding: 10px;
+}
+.description .description_text .description_book button a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+.description .description_text .description_book p {
+  margin-top: 10px;
+}
+.description .description_points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.description .description_points .point_one,
+.description .description_points .point_two,
+.description .description_points .point_three {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 5px 0 5px;
+  padding: 5px;
+}
+.description .description_points .point_one img,
+.description .description_points .point_two img,
+.description .description_points .point_three img {
+  width: 30px;
+  height: 30px;
+  padding-left: 10px;
+}
+.description .description_points .point_one p,
+.description .description_points .point_two p,
+.description .description_points .point_three p {
+  font-weight: 600;
+  text-align: center;
+}
+.description .description_points .point_one p span,
+.description .description_points .point_two p span,
+.description .description_points .point_three p span {
+  font-weight: normal;
+}
+.description .description_image {
+  display: none;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.feedback .firstline {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.feedback .firstline .feedback_yandex {
+  max-width: 160px;
+}
+.feedback .firstline .feedback_yandex .feedback_yandex-logo {
+  max-width: 125px;
+  margin: 0 auto;
+  height: 60px;
+}
+.feedback .firstline .feedback_yandex .feedback_yandex-logo img {
+  width: 100%;
+}
+.feedback .firstline .feedback_yandex .feedback_yandex-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.feedback .firstline .feedback_yandex .feedback_yandex-rating .star {
+  position: relative;
+  color: #ccc;
+  font-size: 25px;
+  line-height: 25px;
+}
+.feedback .firstline .feedback_yandex .feedback_yandex-rating .star:first-child {
+  margin-left: 5px;
+}
+.feedback .firstline .feedback_yandex .feedback_yandex-rating .star::before {
+  content: "★";
+  position: absolute;
+  color: #ffc107;
+  clip-path: none;
+}
+.feedback .firstline .feedback_yandex .feedback_yandex-rating p {
+  font-size: 25px;
+  margin: 0 0 0 10px;
+}
+.feedback .firstline .feedback_yandex .feedback_yandex-quantity p {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  margin: 0;
+  justify-self: center;
+}
+.feedback .firstline .feedback_2gis {
+  max-width: 160px;
+}
+.feedback .firstline .feedback_2gis .feedback_2gis-logo {
+  max-width: 70px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.feedback .firstline .feedback_2gis .feedback_2gis-logo img {
+  width: 100%;
+}
+.feedback .firstline .feedback_2gis .feedback_2gis-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.feedback .firstline .feedback_2gis .feedback_2gis-rating .star {
+  position: relative;
+  color: #ccc;
+  font-size: 25px;
+  line-height: 25px;
+}
+.feedback .firstline .feedback_2gis .feedback_2gis-rating .star:first-child {
+  margin-left: 5px;
+}
+.feedback .firstline .feedback_2gis .feedback_2gis-rating .star::before {
+  content: "★";
+  position: absolute;
+  color: #ffc107;
+  clip-path: none;
+}
+.feedback .firstline .feedback_2gis .feedback_2gis-rating p {
+  font-size: 25px;
+  margin: 0 0 0 10px;
+}
+.feedback .firstline .feedback_2gis .feedback_2gis-quantity p {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  margin: 0;
+  justify-self: center;
+}
+.feedback .second-line {
+  display: flex;
+  justify-content: center;
+}
+.feedback .second-line .feedback_prodoctorov {
+  max-width: 160px;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-logo {
+  max-width: 125px;
+  margin: 0 auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-logo img {
+  width: 100%;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating .star {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+  line-height: 25px;
+  color: #e4e5e9;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating .star:first-child {
+  margin-left: 5px;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating .star::before {
+  content: "★";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffc107;
+  overflow: hidden;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating .star:nth-child(1)::before {
+  width: 100%;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating .star:nth-child(2)::before {
+  width: 100%;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating .star:nth-child(3)::before {
+  width: 100%;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating .star:nth-child(4)::before {
+  width: 100%;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating .star:nth-child(5)::before {
+  width: 80%;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-rating p {
+  font-size: 25px;
+  margin: 0 0 0 10px;
+}
+.feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-quantity p {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  margin: 0;
+  justify-self: center;
+}
+
+.doctors {
+  background-color: #EADAC5;
+  padding: 10px 0;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.doctors .doctor_maksutov-title {
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+}
+.doctors .doctor_dergunov-title {
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+}
+.doctors .doctor_card {
+  width: 310px;
+  border-radius: 20px;
+  background-color: #fff;
+  margin: 0 5px;
+}
+.doctors .doctor_card .doctor_maksutov-descr,
+.doctors .doctor_card .doctor_dergunov-descr {
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+.doctors .doctor_card p {
+  padding: 5px;
+}
+.doctors .doctor_card .doctor_maksutov-exp,
+.doctors .doctor_card .doctor_dergunov-exp {
+  text-align: center;
+  font-weight: 600;
+}
+.doctors .doctor_card .doctor_maksutov-img,
+.doctors .doctor_card .doctor_dergunov-img {
+  width: 100%;
+}
+
+.implantsystems {
+  background-color: #EADAC5;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.implantsystems .implantsystems_card {
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 30px 10px 10px;
+  max-width: 320px;
+}
+.implantsystems .implantsystems_card .card_title {
+  width: 290px;
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.implantsystems .implantsystems_card .card_title .card_title-img {
+  width: 10%;
+  transform: rotate(-25deg);
+}
+.implantsystems .implantsystems_card .card_title .card_title-straum {
+  margin-left: 20px;
+  width: 22%;
+  transform: rotate(0);
+}
+.implantsystems .implantsystems_card .card_title .card_title-text {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  color: #39513F;
+  font-size: 22px;
+  line-height: 24px;
+}
+.implantsystems .implantsystems_card .card_title .card_title-text span {
+  font-size: 16px;
+  line-height: 18px;
+}
+.implantsystems .card_description {
+  max-width: 270px;
+  background-color: #EADAC5;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+.implantsystems p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+}
+.implantsystems .card_terms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.implantsystems .card_terms .card_terms-first {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.implantsystems .card_terms .card_terms-first p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  width: 45%;
+}
+.implantsystems .card_terms .card_terms-first p span {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.implantsystems .card_terms .card_terms-second {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.implantsystems .card_terms .card_terms-second p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  width: 45%;
+  text-align: center;
+}
+.implantsystems .card_terms .card_terms-second p span {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+.implantsystems .card_price {
+  margin: 0 auto 20px;
+  max-width: 150px;
+  background-color: #EADAC5;
+  padding: 5px;
+  border-radius: 20px;
+}
+.implantsystems p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.guarantee {
+  padding: 10px 5px;
+  background-color: #EADAC5;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.guarantee .guarantee_origin {
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+  max-width: 320px;
+  height: 140px;
+}
+.guarantee .guarantee_circon {
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+  max-width: 320px;
+  height: 140px;
+}
+.guarantee .guarantee_circon .guarantee_circon-title {
+  height: 40px;
+}
+
+.viewsbefore {
+  max-width: 320px;
+  margin: 0 auto 20px;
+}
+.viewsbefore .viewsbefore_container {
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+.viewsbefore .viewsbefore_container .viewsbefore_container-before {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.viewsbefore .viewsbefore_container .viewsbefore_container-after {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.booking {
+  max-width: 1600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  margin: 0 auto;
+}
+.booking .booking_btn {
+  border: 2px solid #ff0000;
+  border-radius: 20px;
+  font-size: 25px;
+  line-height: 27px;
+  font-weight: 600;
+  background-color: #ff0000;
+  padding: 10px;
+  width: 310px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.booking .booking_btn a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.videofeedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.videofeedback .videofeedback_title {
+  text-align: center;
+}
+.videofeedback .videofeedback_video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 320px;
+  padding: 0 5px 0;
+}
+.videofeedback video {
+  width: 99%;
+}
+
+/*MEDIA*/
+@media (min-width: 768px) {
+  .description {
+    display: flex;
+    max-width: 1600px;
+    max-height: 600px;
+    margin: 0 auto;
+    align-items: stretch;
+  }
+  .description .description_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .description .description_text .description_text-title {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .description .description_text .description_text-title .title-title {
+    margin-bottom: 10px;
+  }
+  .description .description_text .title-img {
+    display: none;
+  }
+  .description .description_text .description_points {
+    align-items: center;
+    flex-grow: 1;
+  }
+  .description .description_text .description_points .point_one,
+  .description .description_text .description_points .point_two,
+  .description .description_text .description_points .point_three {
+    width: 365px;
+  }
+  .description .description_text .description_book {
+    padding: 10px 10px 0 10px;
+  }
+  .description .description_text .description_book p {
+    margin-top: 10px;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .description .description_image {
+    display: flex;
+    flex: 1;
+    max-height: 600px;
+    align-items: center;
+    justify-content: center;
+  }
+  .description .description_image img {
+    width: 100%;
+    height: 100%;
+    max-height: 590px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+    padding: 5px;
+  }
+  .feedback {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .doctors {
+    max-width: 1600px;
+    margin: 0 auto 25px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+  .doctors .doctor_card {
+    height: 830px;
+  }
+  .implantsystems {
+    max-width: 1600px;
+    margin: 0 auto 25px;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+  }
+  .guarantee {
+    max-width: 1600px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin: 0 auto 25px;
+  }
+  .viewsbefore {
+    max-width: 1600px;
+    margin: 0 auto 25px;
+  }
+  .booking .booking_btn {
+    width: 500px;
+    height: 150px;
+    display: block;
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .videofeedback {
+    margin: 0 auto 20px;
+  }
+  .videofeedback .videofeedback_video {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1600px;
+  }
+  .videofeedback video {
+    max-width: 45%;
+    height: auto;
+  }
+}
+@media (min-width: 1000px) {
+  .description .description_text {
+    flex: 2;
+    margin-top: 20px;
+  }
+  .description .description_text .description_text-title {
+    margin-bottom: 30px;
+    max-width: 700px;
+    padding: 0 10px 0;
+  }
+  .description .description_text .description_text-title img {
+    width: 150px;
+    height: 150px;
+    padding-left: 0;
+  }
+  .description .description_text .description_text-title .title-title h3 {
+    font-size: 43px;
+    line-height: 45px;
+  }
+  .description .description_text .description_text-title .title-title p {
+    text-align: center;
+  }
+  .description .description_text .description_points {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    max-width: 700px;
+    justify-content: center;
+    margin: 0 auto 30px;
+  }
+  .description .description_text .description_points .point_one,
+  .description .description_text .description_points .point_two,
+  .description .description_text .description_points .point_three {
+    width: 300px;
+  }
+  .description .description_text .description_book {
+    max-width: 600px;
+    margin: 0 auto 10px;
+  }
+  .description .description_image img {
+    padding: 5px;
+    box-sizing: border-box;
+  }
+}/*# sourceMappingURL=implantation.css.map */
