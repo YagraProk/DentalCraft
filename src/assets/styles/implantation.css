@@ -133,7 +133,7 @@
   gap: 10px;
 }
 .feedback .firstline .feedback_yandex {
-  max-width: 160px;
+  max-width: 150px;
 }
 .feedback .firstline .feedback_yandex .feedback_yandex-logo {
   max-width: 125px;
@@ -173,10 +173,12 @@
   line-height: 22px;
   font-weight: 600;
   margin: 0;
+  text-align: center;
   justify-self: center;
 }
 .feedback .firstline .feedback_2gis {
-  max-width: 160px;
+  max-width: 150px;
+  margin-left: 5px;
 }
 .feedback .firstline .feedback_2gis .feedback_2gis-logo {
   max-width: 70px;
@@ -219,18 +221,20 @@
   font-weight: 600;
   margin: 0;
   justify-self: center;
+  text-align: center;
 }
 .feedback .second-line {
   display: flex;
   justify-content: center;
+  margin-left: 5px;
 }
 .feedback .second-line .feedback_prodoctorov {
-  max-width: 160px;
+  max-width: 150px;
 }
 .feedback .second-line .feedback_prodoctorov .feedback_prodoctorov-logo {
   max-width: 125px;
   margin: 0 auto;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
 }
@@ -287,6 +291,7 @@
   font-weight: 600;
   margin: 0;
   justify-self: center;
+  text-align: center;
 }
 
 .doctors {
