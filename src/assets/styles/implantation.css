@@ -134,6 +134,7 @@
 }
 .feedback .firstline .feedback_yandex {
   max-width: 150px;
+  margin-right: 10px;
 }
 .feedback .firstline .feedback_yandex .feedback_yandex-logo {
   max-width: 125px;
@@ -178,7 +179,6 @@
 }
 .feedback .firstline .feedback_2gis {
   max-width: 150px;
-  margin-left: 5px;
 }
 .feedback .firstline .feedback_2gis .feedback_2gis-logo {
   max-width: 70px;
@@ -226,7 +226,6 @@
 .feedback .second-line {
   display: flex;
   justify-content: center;
-  margin-left: 5px;
 }
 .feedback .second-line .feedback_prodoctorov {
   max-width: 150px;
