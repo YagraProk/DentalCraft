@@ -284,7 +284,7 @@ header .header_inner .specialButton {
   gap: 15px;
   transition: all 0.3s;
   width: 280px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .drop_contacts._active {

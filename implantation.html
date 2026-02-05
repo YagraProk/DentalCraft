@@ -6,6 +6,7 @@
     <title>Имплантация</title>
     <link href="./src/assets/styles/index.css" rel="stylesheet">
     <link href="./src/assets/styles/implantation.css" rel="stylesheet">
+    <link href="./src/assets/styles/slider.css" rel="stylesheet">
     <link rel="icon" href="/favicon.png" type="image/png">
     <script src="https://lidrekon.ru/slep/js/jquery.js"></script>
     <script src="https://lidrekon.ru/slep/js/uhpv-full.min.js"></script>
@@ -68,27 +69,24 @@
                 <img src="/src/assets/icons/implantat.jpg">
                 <div class="title-title">
                 <h3>Зуб "под ключ"<span>от 49 990 ₽</span></h3>
+                <p class="title-note">в феврале</p>
                 <p>в стоимость входит имплантат и коронка из диоксида циркония</p>
                 </div>
             </div>
         <img src="/src/assets/images/implantation/titleshort.jpg" class ="title-img" alt="title image">
         <div class="description_points">
             <div class="point_one">
-                <img src="/src/assets/icons/mark.png">
                 <p>Фиксированная стоимость<span> по плану лечения, без доплат</span></p>
             </div>
             <div class="point_two">
-                <img src="/src/assets/icons/mark.png">
                 <p>Лечение без боли<span> во время операции</span></p>
             </div>
             <div class="point_three">
-                <img src="/src/assets/icons/mark.png">
                 <p>Все этапы в одном месте:<span> без лишних разъездов</span></p>
             </div>
         </div>
         <div class="description_book">
-          <h4>Запишитесь на консультацию</h4>
-          <button><a href="https://t.me/m/y6QZmjFhOGJi">Зафиксируйте цену сейчас</a></button>
+          <button><a href="https://t.me/m/y6QZmjFhOGJi">Зафиксируйте цену по акции</a></button>
           <p>На консультации вы получите план лечения с описанием всех действий и стоимости</p>
         </div>
         </div>
@@ -150,6 +148,45 @@
         </div>
       </div>
       </div>
+    </section>
+
+    <section class="clinicphotos">
+      <div class="photos">
+    <div class="itc-slider" data-slider="itc-slider">
+      <div class="itc-slider-wrapper">
+        <div class="itc-slider-items">
+        <div class="itc-slider-item">
+          <div class="itc-slider-img-container">
+          <img src="/src/assets/images/implantation/clinicphotos/photo_1.jpg">
+          </div>
+        </div>
+        <div class="itc-slider-item">
+          <div class="itc-slider-img-container">
+          <img src="/src/assets/images/implantation/clinicphotos/photo_2.jpg" loading="lazy">
+          </div>
+        </div>
+        <div class="itc-slider-item">
+          <div class="itc-slider-img-container">
+          <img src="/src/assets/images/implantation/clinicphotos/photo_3.jpg" loading="lazy">
+          </div>
+        </div>
+        <div class="itc-slider-item">
+          <div class="itc-slider-img-container">
+          <img src="/src/assets/images/implantation/clinicphotos/photo_4.jpg" loading="lazy">
+          </div>
+        </div>
+        </div>
+      </div>
+      <button class="itc-slider-btn itc-slider-btn-prev"></button>
+      <button class="itc-slider-btn itc-slider-btn-next"></button>
+      <ol class="itc-slider-indicators">
+    <li class="itc-slider-indicator" data-slide-to="0"></li>
+    <li class="itc-slider-indicator" data-slide-to="1"></li>
+    <li class="itc-slider-indicator" data-slide-to="2"></li>
+    <li class="itc-slider-indicator" data-slide-to="3"></li>
+    </ol>
+    </div>
+    </div>
     </section>
 
     <section class="doctors">
@@ -241,6 +278,7 @@
         </div>
     </section>
 </div>
+<script src="/src/slider.js"></script>  
 <script src="src/main.js"></script>    
 </body>
 </html>
