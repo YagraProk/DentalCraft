@@ -383,14 +383,6 @@ header .header_inner .specialButton {
   display: none;
 }
 
-.banner {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.banner .banner_img {
-  width: 100%;
-}
-
 /*road*/
 .road {
   margin-bottom: 80px;
@@ -577,13 +569,6 @@ table tr:last-child td {
 
 /*MEDIA*/
 @media (min-width: 540px) {
-  .discount {
-    display: flex;
-    justify-content: center;
-  }
-  .discount img {
-    width: 80%;
-  }
   .footer .footer_inner {
     justify-content: space-between;
   }
@@ -704,9 +689,6 @@ table tr:last-child td {
     top: 25px;
     gap: 55px;
   }
-  .wrapper .discount {
-    margin-bottom: 80px;
-  }
   .wrapper .footer .footer_inner {
     justify-content: space-around;
     padding: 20px;
@@ -755,9 +737,6 @@ table tr:last-child td {
     display: block;
     order: 1;
   }
-  .wrapper .banner .banner_img {
-    width: 85%;
-  }
   .wrapper .our_services {
     align-items: normal;
   }
@@ -805,13 +784,6 @@ table tr:last-child td {
   .wrapper .footer .footer_inner .footer_logo a .logo_word {
     display: flex;
     flex-direction: column;
-  }
-  .discount {
-    margin-left: 200px;
-    margin-right: 200px;
-  }
-  .discount img {
-    width: 100%;
   }
   .price h2 {
     margin-bottom: 30px;
