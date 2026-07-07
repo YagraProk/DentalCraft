@@ -399,6 +399,18 @@ header .header_inner .specialButton {
   width: 100%;
 }
 
+.sale img {
+  max-width: 100%;
+  align-items: center;
+}
+.sale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
 /*our_services*/
 .our_services {
   display: flex;
@@ -644,6 +656,13 @@ table tr:last-child td {
   .header .contacts .drop_contacts .drop_contacts-adress a svg path {
     stroke: #39513F;
   }
+  .sale img {
+    max-width: 45%;
+  }
+  .sale {
+    flex-direction: row;
+    gap: 30px;
+  }
   .our_services {
     gap: 50px;
   }
@@ -736,6 +755,9 @@ table tr:last-child td {
   .wrapper .header .header_inner .specialButton {
     display: block;
     order: 1;
+  }
+  .wrapper .sale {
+    gap: 40px;
   }
   .wrapper .our_services {
     align-items: normal;

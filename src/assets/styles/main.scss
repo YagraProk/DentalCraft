@@ -431,6 +431,19 @@ img{
 }
 }
 
+.sale{
+  img{
+    max-width: 100%;
+    align-items: center;
+
+  }
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 40px;  
+margin-bottom: 80px;
+}
+
 /*our_services*/
 
 .our_services{
@@ -737,6 +750,14 @@ path{
 }
 }
 
+.sale{
+  img{
+    max-width: 45%;
+  }
+flex-direction: row;
+gap: 30px;  
+}
+
 .our_services{
   gap: 50px;
 
@@ -873,6 +894,10 @@ a{
   order: 1;
 } 
 }
+}
+
+.sale{
+gap: 40px;  
 }
 
 
